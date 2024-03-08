@@ -1,0 +1,49 @@
+// // hamburger menu
+#pull {
+    display: block;
+    background-color: $link;
+    padding-top: 12px;
+    padding-left: 12px;
+    width: 100vh;
+  }
+  
+  #pull::after {
+    content: "";
+    background: url(../img/nav-icon.png) no-repeat;
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+    display: inline-block;
+  }
+
+// // navigation
+nav ul {
+    // display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: $link;
+  }
+  
+  nav a {
+    padding: 1rem;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  nav li:hover:not(.active) {
+    background-color: lighten($link, 10%);
+  }
+  
+  nav .active {
+    background-color: darken($link, 10%);
+  }
+  
+  nav .active a {
+    font-weight: bold;
+  }
